@@ -58,6 +58,8 @@ html {
             -webkit-clip-path: url(#screenClip);
             clip-path: url(#screenClip);
             opacity: 0.5;
+            pointer-events: none;
+            mix-blend-mode: darken;
           }
           .content {
             position: absolute;
