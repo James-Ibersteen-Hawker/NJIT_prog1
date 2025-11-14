@@ -7,7 +7,24 @@ $(document).ready(async () => {
     name: null,
     desc: null,
     render() {
-      console.log(this.img, this.name, this.desc);
+      const iP = (this.index - 1 + list.length) % list.length;
+      const i = this.index;
+      const iA = (this.index + 1) % list.length;
+      const e1 = list[iA].name.split(" ").join("-").split("/").join("-");
+      const e2 = list[i].name.split(" ").join("-").split("/").join("-");
+      const e3 = list[iP].name.split(" ").join("-").split("/").join("-");
+      list.forEach(({ name }) => {
+        $(`#${name.split(" ").join("-").split("/").join("-")}`).addClass(
+          "none"
+        );
+      });
+      $(`#${e1}`).addClass("backL");
+      $(`#${e1}`).removeClass("none");
+      $(`#${e2}`).addClass("current");
+      $(`#${e2}`).removeClass("none");
+      $(`#${e3}`).addClass("backR");
+      $(`#${e3}`).removeClass("none");
+      console.log(e1, e2, e3);
     },
   };
   control = new Proxy(control, {
@@ -24,7 +41,7 @@ $(document).ready(async () => {
   });
   const carousel = new Carousel(list, document.querySelector(".img"), 3);
   carousel.init();
-  console.log(carousel);
+  control.render();
 });
 
 class Carousel {
@@ -35,7 +52,11 @@ class Carousel {
   }
   init() {
     this.imgs.forEach(({ filepath, name }) => {
-      const img = `<img src="${filepath}" alt="${name}"/>`;
+      const img = `<img src="${filepath}" alt="${name}" id="${name
+        .split(" ")
+        .join("-")
+        .split("/")
+        .join("-")}"/>`;
       this.container.insertAdjacentHTML("beforeend", img);
     });
   }
