@@ -1,63 +1,41 @@
 $(document).ready(async () => {
   let list = await fetch("tanks.json");
   list = await list.json();
-  let control = {
-    index: 0,
-    img: null,
-    name: null,
-    desc: null,
-    render() {
-      const iP = (this.index - 1 + list.length) % list.length;
-      const i = this.index;
-      const iA = (this.index + 1) % list.length;
-      const e1 = list[iA].name.split(" ").join("-").split("/").join("-");
-      const e2 = list[i].name.split(" ").join("-").split("/").join("-");
-      const e3 = list[iP].name.split(" ").join("-").split("/").join("-");
-      list.forEach(({ name }) => {
-        $(`#${name.split(" ").join("-").split("/").join("-")}`).addClass(
-          "none"
-        );
+  const toID = (str) => str.replace(/[\s/]+/g, "-");
+  const carousel = {
+    container: $(".img"),
+    i: 0,
+    init() {
+      list.forEach(({ filepath, name }) => {
+        const img = `<img src="${filepath}" alt="${name}" id="${toID(name)}"/>`;
+        this.container.append(img);
       });
-      $(`#${e1}`).addClass("backL");
-      $(`#${e1}`).removeClass("none");
-      $(`#${e2}`).addClass("current");
-      $(`#${e2}`).removeClass("none");
-      $(`#${e3}`).addClass("backR");
-      $(`#${e3}`).removeClass("none");
-      console.log(e1, e2, e3);
+      this.render();
+    },
+    next() {
+      this.i = (this.i + 1) % list.length;
+      this.render();
+    },
+    prev() {
+      this.i = (this.i - 1 + list.length) % list.length;
+      this.render();
+    },
+    render() {
+      const iP = (this.i - 1 + list.length) % list.length;
+      const iA = (this.i + 1) % list.length;
+      const [e1, e2, e3] = [list[iP], list[this.i], list[iA]].map(({ name }) =>
+        $(`#${toID(name)}`)
+      );
+      list.forEach(({ name }) => $(`#${toID(name)}`).attr("class", "none"));
+      [e1, e2, e3].forEach((e) => e.removeClass("none"));
+      e1.addClass("backL"), e2.addClass("current"), e3.addClass("backR");
+      const { name, blurb } = list[this.i];
+      $(".name").text(name), $(".blurb").text(blurb);
     },
   };
-  control = new Proxy(control, {
-    set(t, p, v, r) {
-      const reflect = Reflect.set(t, p, v, r);
-      if (p === "index") {
-        control.img = list[control.index].filepath;
-        control.name = list[control.index].name;
-        control.desc = list[control.index].blurb;
-        control.render();
-      }
-      return reflect;
-    },
-  });
-  const carousel = new Carousel(list, document.querySelector(".img"), 3);
   carousel.init();
-  control.render();
+  //add buttons later
+  $(document).on("click", () => {
+    carousel.next();
+  });
 });
-
-class Carousel {
-  constructor(imgs, container, visCount) {
-    this.imgs = imgs;
-    this.container = container;
-    this.visCount = visCount;
-  }
-  init() {
-    this.imgs.forEach(({ filepath, name }) => {
-      const img = `<img src="${filepath}" alt="${name}" id="${name
-        .split(" ")
-        .join("-")
-        .split("/")
-        .join("-")}"/>`;
-      this.container.insertAdjacentHTML("beforeend", img);
-    });
-  }
-}
