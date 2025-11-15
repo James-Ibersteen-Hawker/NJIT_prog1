@@ -2,6 +2,7 @@ $(document).ready(async () => {
   let list = await fetch("tanks.json");
   list = await list.json();
   const toID = (str) => str.replace(/[\s/]+/g, "-");
+  const wait = (t) => new Promise((resolve) => setTimeout(() => resolve(), t));
   const carousel = {
     container: $(".img"),
     i: 0,
@@ -20,7 +21,7 @@ $(document).ready(async () => {
       this.i = (this.i - 1 + list.length) % list.length;
       this.render();
     },
-    render() {
+    async render() {
       const iP = (this.i - 1 + list.length) % list.length;
       const iA = (this.i + 1) % list.length;
       const [e1, e2, e3] = [list[iP], list[this.i], list[iA]].map(({ name }) =>
@@ -28,7 +29,10 @@ $(document).ready(async () => {
       );
       list.forEach(({ name }) => $(`#${toID(name)}`).attr("class", "none"));
       [e1, e2, e3].forEach((e) => e.removeClass("none"));
-      e1.addClass("backL"), e2.addClass("current"), e3.addClass("backR");
+      e1.addClass("moveIn"), e2.addClass("toCurrent"), e3.addClass("toRight"); //animations
+      await wait(1000);
+      e1.attr("class", "backL"), e2.attr("class", "current");
+      e3.attr("class", "backR");
       const { name, blurb } = list[this.i];
       $(".name").text(name), $(".blurb").text(blurb);
     },

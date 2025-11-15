@@ -73,6 +73,7 @@ html {
               .screen {
                 position: absolute;
                 width: 100%;
+                display: none;
                 height: 100%;
                 background: url(imgs/static.gif);
                 background-position: top right;
@@ -150,6 +151,27 @@ html {
                       brightness(50%) contrast(150%)
                       drop-shadow(0px 0px 1px black);
                   }
+                  .moveIn {
+                    animation-name: moveIn;
+                    animation-timing-function: ease-in-out;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
+                  }
+                  .toCurrent {
+                    animation-name: toCurrent;
+                    animation-timing-function: ease-in-out;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
+                  }
+                  .toRight {
+                    animation-name: toRight;
+                    animation-timing-function: ease-in-out;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
+                  }
                 }
                 .description {
                   width: 100%;
@@ -168,5 +190,24 @@ html {
         }
       }
     }
+  }
+}
+
+@keyframes moveIn {
+  0% {
+  }
+  100% {
+  }
+}
+@keyframes toCurrent {
+  0% {
+  }
+  100% {
+  }
+}
+@keyframes toRight {
+  0% {
+  }
+  100% {
   }
 }
