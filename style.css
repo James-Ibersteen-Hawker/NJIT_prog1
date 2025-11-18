@@ -98,6 +98,7 @@ html {
               justify-content: center;
               padding-top: 5.3%;
               .contentContainer {
+                position: relative;
                 width: 100%;
                 height: 100%;
                 display: flex;
@@ -172,6 +173,53 @@ html {
                     animation-fill-mode: forwards;
                     animation-iteration-count: 1;
                   }
+                  .arrow {
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    z-index: 5;
+                    display: block;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: 0.2s;
+                    filter: drop-shadow(0px 0px 2px white)
+                      drop-shadow(0px 0px 2px white);
+                    .arrowInner {
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                  .lArrow {
+                    left: 5%;
+                    .arrowInL {
+                      background: linear-gradient(
+                        to right,
+                        white,
+                        rgb(154, 12, 12),
+                        black
+                      );
+                      -webkit-clip-path: url(#lArrowClip);
+                      clip-path: url(#lArrowClip);
+                    }
+                  }
+                  .rArrow {
+                    right: 5%;
+                    .arrowInR {
+                      background: linear-gradient(
+                        to left,
+                        white,
+                        rgb(154, 12, 12),
+                        black
+                      );
+                      -webkit-clip-path: url(#rArrowClip);
+                      clip-path: url(#rArrowClip);
+                    }
+                  }
+                  .arrow:hover {
+                    transform: translateY(-50%) rotate3d(1, 1, 0, 30deg);
+                    perspective: 50px;
+                    transition: 0.2s;
+                  }
                 }
                 .description {
                   width: 100%;
@@ -183,6 +231,11 @@ html {
                   align-items: center;
                   padding: 0 2% 2% 2%;
                   text-align: center;
+                  .moreBtn {
+                  }
+                  .rot90 {
+                    transform: rotate(90deg);
+                  }
                 }
               }
             }

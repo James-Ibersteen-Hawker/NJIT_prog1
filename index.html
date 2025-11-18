@@ -19,16 +19,26 @@
 
   <body class="container-fluid">
     <main class="row">
-      <div class="col-12 col-md-10 col-lg-12">
+      <div class="col-12 col-md-10 col-lg-8 col-xxl-10">
         <div class="back">
           <div class="front">
             <div class="shadow">
               <div class="content">
                 <div class="contentContainer">
-                  <div class="img"></div>
+                  <div class="img">
+                    <div class="lArrow arrow">
+                      <div class="arrowInner arrowInL"></div>
+                    </div>
+                    <div class="rArrow arrow">
+                      <div class="arrowInner arrowInR"></div>
+                    </div>
+                  </div>
                   <div class="description">
-                    <div class="name"></div>
-                    <div class="blurb"></div>
+                    <div class="moreBtn">See More</div>
+                    <div class="more">
+                      <div class="name"></div>
+                      <div class="blurb"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -56,6 +66,12 @@
        A 1 0.3 0 0 1 0.07,0.9
        A 0.1 0.7 0 0 1 0.07,0.1 Z"
           />
+        </clipPath>
+        <clipPath id="lArrowClip" clipPathUnits="objectBoundingBox">
+          <path d="M 0.8,0 L 0.3,0.5 L 0.8,1 A 0.5 1 0 0 1,0.8,0 Z"></path>
+        </clipPath>
+        <clipPath id="rArrowClip" clipPathUnits="objectBoundingBox">
+          <path d="M 0.2,0 L 0.7,0.5 L 0.2,1 A 0.5 1 0 0 0 0.2,0 Z"></path>
         </clipPath>
       </defs>
     </svg>
