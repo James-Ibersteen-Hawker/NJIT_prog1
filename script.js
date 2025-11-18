@@ -52,8 +52,8 @@ $(document).ready(async () => {
       e1.addClass("moveIn"), e2.addClass("toCurrent"), e3.addClass("toRight"); //animations
       e1.attr("class", "backL"), e2.attr("class", "current");
       e3.attr("class", "backR");
-      const { name, blurb } = list[this.i];
-      $(".name").text(name), $(".blurb").text(blurb);
+      const { name, blurb, date } = list[this.i];
+      $(".name").text(`${name} - ${date}`), $(".blurb").text(blurb);
     },
   };
   $(".rArrow").on("click", () => carousel.next());

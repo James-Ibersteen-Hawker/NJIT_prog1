@@ -2,56 +2,67 @@
   {
     "name": "- A39 Tortoise",
     "filepath": "GalleryImgs/A39-Tortoise.jpg",
-    "blurb": "A British late-war heavy assault gun, designed partially as a counter to the German Jagdtiger Tank Destroyer."
+    "blurb": "A British late-war heavy assault gun, designed partially as a counter to the German Jagdtiger Tank Destroyer.",
+    "date": "1945"
   },
   {
     "name": "- T32E1",
     "filepath": "GalleryImgs/T32E1.png",
-    "blurb": "The T32 / T32E1 was a proposed upgrade to the M26 Pershing, whose armor was thought to be too weak to fight against German Tigers."
+    "blurb": "The T32 / T32E1 was a proposed upgrade to the M26 Pershing, whose armor was thought to be too weak to fight against German Tigers.",
+    "date": "1945"
   },
   {
     "name": "- T58 Heavy Tank",
     "filepath": "GalleryImgs/T58.jpg",
-    "blurb": "The T58 Heavy Tank was an attempt to mount a 152mm (6\") gun into a massive oscillating turret. The only prototype wasn't ordered."
+    "blurb": "The T58 Heavy Tank was an attempt to mount a 152mm (6\") gun into a massive oscillating turret. The only prototype wasn't ordered.",
+    "date": "1950's"
   },
   {
     "name": "- Object 279",
     "filepath": "GalleryImgs/Object-279.jpg",
-    "blurb": "The Object 279, armed with a fearsome 130mm cannon, was designed to resist the shockwave of a nuclear explosion. It was never mass produced."
+    "blurb": "The Object 279, armed with a fearsome 130mm cannon, was designed to resist the shockwave of a nuclear explosion. It was never mass produced.",
+    "date": "1959"
   },
   {
     "name": "- FV4005",
     "filepath": "GalleryImgs/FV4005.jpg",
-    "blurb": "The FV4005 is the largest gun ever fitted to a designated tank, at 183mm caliber. It had enough power to rip apart the IS-3's upper glacis."
+    "blurb": "The FV4005 is the largest gun ever fitted to a designated tank, at 183mm caliber. It had enough power to rip apart the IS-3's upper glacis.",
+    "date": "1950's"
   },
   {
     "name": "- Sd Kfz 234/4",
     "filepath": "GalleryImgs/Sd-Kfz-234-4.jpeg",
-    "blurb": "The Sd Kfz 234/4 was a lightly armored German WWII car armed with the powerful 75mm Pak 40 anti-tank gun."
+    "blurb": "The Sd Kfz 234/4 was a lightly armored German WWII car armed with the powerful 75mm Pak 40 anti-tank gun.",
+    "date": "1944"
   },
   {
     "name": "- Leopard 2K",
     "filepath": "GalleryImgs/Leopard-2K.png",
-    "blurb": "The Leopard 2K was a prototype for the Leopard 2, and was a very fast, capable, and dangerous MBT, armed with a 120mm Rheinmetall cannon."
+    "blurb": "The Leopard 2K was a prototype for the Leopard 2, and was a very fast, capable, and dangerous MBT, armed with a 120mm Rheinmetall cannon.",
+    "date": "1970's"
   },
   {
     "name": "- Begleitpanzer 57",
     "filepath": "GalleryImgs/Begleitpanzer-57.webp",
-    "blurb": "The Begleitpanzer 57 was a German attempt to make their Marder IFV more capable, arming it with a TOW ATGM launcher and a 57mm autocannon."
+    "blurb": "The Begleitpanzer 57 was a German attempt to make their Marder IFV more capable, arming it with a TOW ATGM launcher and a 57mm autocannon.",
+    "date": "1977"
   },
   {
     "name": "- Ferdinand",
     "filepath": "GalleryImgs/Ferdinand.jpeg",
-    "blurb": "The Ferdinand (or Elefant) was a heavy tank destroyer developed from the failed Porsche Tiger design, mounting the \"long '88\"."
+    "blurb": "The Ferdinand (or Elefant) was a heavy tank destroyer developed from the failed Porsche Tiger design, mounting the \"long '88\".",
+    "date": "1943"
   },
   {
     "name": "- IS-7",
     "filepath": "GalleryImgs/IS-7.jpeg",
-    "blurb": "The IS-7 is perhaps the best heavy tank ever built, designed by the USSR after WWII. However, it was rendered obsolete by modern MBT's."
+    "blurb": "The IS-7 is perhaps the best heavy tank ever built, designed by the USSR after WWII. However, it was rendered obsolete by modern MBT's.",
+    "date": "1946"
   },
   {
     "name": "- CV90105 XC-8",
     "filepath": "GalleryImgs/CV90105-XC-8.webp",
-    "blurb": "The CV90105 XC-8 was a light tank, made from the Swedish CV90 IFV which mounted the Cockerill XC-8 turret and 105mm gun."
+    "blurb": "The CV90105 XC-8 was a light tank, made from the Swedish CV90 IFV which mounted the Cockerill XC-8 turret and 105mm gun.",
+    "date": "2014"
   }
 ]
