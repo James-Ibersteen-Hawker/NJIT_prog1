@@ -1,52 +1,57 @@
 [
   {
-    "name": "A39 Tortoise",
+    "name": "- A39 Tortoise",
     "filepath": "GalleryImgs/A39-Tortoise.jpg",
     "blurb": "A British late-war heavy assault gun, designed partially as a counter to the German Jagdtiger Tank Destroyer."
   },
   {
-    "name": "T32E1",
+    "name": "- T32E1",
     "filepath": "GalleryImgs/T32E1.png",
-    "blurb": ""
+    "blurb": "The T32 / T32E1 was a proposed upgrade to the M26 Pershing, whose armor was thought to be too weak to fight against German Tigers."
   },
   {
-    "name": "T58 Heavy Tank",
+    "name": "- T58 Heavy Tank",
     "filepath": "GalleryImgs/T58.jpg",
-    "blurb": ""
+    "blurb": "The T58 Heavy Tank was an attempt to mount a 152mm (6\") gun into a massive oscillating turret. The only prototype wasn't ordered."
   },
   {
-    "name": "Object 279",
+    "name": "- Object 279",
     "filepath": "GalleryImgs/Object-279.jpg",
-    "blurb": ""
+    "blurb": "The Object 279, armed with a fearsome 130mm cannon, was designed to resist the shockwave of a nuclear explosion. It was never mass produced."
   },
   {
-    "name": "FV4005",
+    "name": "- FV4005",
     "filepath": "GalleryImgs/FV4005.jpg",
-    "blurb": ""
+    "blurb": "The FV4005 is the largest gun ever fitted to a designated tank, at 183mm caliber. It had enough power to rip apart the IS-3's upper glacis."
   },
   {
-    "name": "Sd Kfz 234/4",
+    "name": "- Sd Kfz 234/4",
     "filepath": "GalleryImgs/Sd-Kfz-234-4.jpeg",
-    "blurb": ""
+    "blurb": "The Sd Kfz 234/4 was a lightly armored German WWII car armed with the powerful 75mm Pak 40 anti-tank gun."
   },
   {
-    "name": "Leopard 2K",
+    "name": "- Leopard 2K",
     "filepath": "GalleryImgs/Leopard-2K.png",
-    "blurb": ""
+    "blurb": "The Leopard 2K was a prototype for the Leopard 2, and was a very fast, capable, and dangerous MBT, armed with a 120mm Rheinmetall cannon."
   },
   {
-    "name": "Begleitpanzer 57",
+    "name": "- Begleitpanzer 57",
     "filepath": "GalleryImgs/Begleitpanzer-57.webp",
-    "blurb": ""
+    "blurb": "The Begleitpanzer 57 was a German attempt to make their Marder IFV more capable, arming it with a TOW ATGM launcher and a 57mm autocannon."
   },
   {
-    "name": "Ferdinand",
+    "name": "- Ferdinand",
     "filepath": "GalleryImgs/Ferdinand.jpeg",
-    "blurb": ""
+    "blurb": "The Ferdinand (or Elefant) was a heavy tank destroyer developed from the failed Porsche Tiger design, mounting the \"long '88\"."
   },
   {
-    "name": "IS-7",
+    "name": "- IS-7",
     "filepath": "GalleryImgs/IS-7.jpeg",
-    "blurb": ""
+    "blurb": "The IS-7 is perhaps the best heavy tank ever built, designed by the USSR after WWII. However, it was rendered obsolete by modern MBT's."
+  },
+  {
+    "name": "- CV90105 XC-8",
+    "filepath": "GalleryImgs/CV90105-XC-8.webp",
+    "blurb": "The CV90105 XC-8 was a light tank, made from the Swedish CV90 IFV which mounted the Cockerill XC-8 turret and 105mm gun."
   }
 ]

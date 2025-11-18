@@ -44,16 +44,21 @@ $(document).ready(async () => {
   carousel.init();
   $(".rArrow").on("click", () => carousel.next());
   $(".lArrow").on("click", () => carousel.prev());
-  const intervalFunc = () =>
+  const intervalFunc = async () => {
+    $(".moreBtn").removeClass("rot90");
+    $(".more").addClass("gone");
     dir === "next" ? carousel.next() : carousel.prev();
+    $(".moreBtn").addClass("rot90");
+    $(".more").removeClass("gone");
+  };
   let interval = setInterval(intervalFunc, time);
   $(document).on("keydown", (event) => {
     if (event.key === "Escape") clearInterval(interval);
     else if (event.key === " ") interval = setInterval(intervalFunc, time);
   });
-  $(".more").hide();
+  $(".more").addClass("gone");
   $(".moreBtn").on("click", () => {
     $(".moreBtn").toggleClass("rot90");
-    $(".more").toggle();
+    $(".more").toggleClass("gone");
   });
 });
