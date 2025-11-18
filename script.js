@@ -15,14 +15,18 @@ $(document).ready(async () => {
       });
       this.render();
     },
-    async next() {
+    next() {
       $(".moreBtn").removeClass("rot90");
       $(".more").addClass("gone");
       this.i = (this.i + 1) % list.length;
       this.render();
       dir = "next";
       $(".img").attr("style", "pointer-events:none;");
-      setTimeout(() => $(".img").attr("style", "pointer-events:auto;"), 900);
+      clearInterval(interval);
+      setTimeout(() => {
+        $(".img").attr("style", "pointer-events:auto;");
+      }, 900);
+      setTimeout(() => (interval = setInterval(intervalFunc, time)), 2000);
     },
     prev() {
       $(".moreBtn").removeClass("rot90");
@@ -31,7 +35,11 @@ $(document).ready(async () => {
       this.render();
       dir = "prev";
       $(".img").attr("style", "pointer-events:none;");
-      setTimeout(() => $(".img").attr("style", "pointer-events:auto;"), 900);
+      clearInterval(interval);
+      setTimeout(() => {
+        $(".img").attr("style", "pointer-events:auto;");
+      }, 900);
+      setTimeout(() => (interval = setInterval(intervalFunc, time)), time);
     },
     async render() {
       const iP = (this.i - 1 + list.length) % list.length;
@@ -48,7 +56,6 @@ $(document).ready(async () => {
       $(".name").text(name), $(".blurb").text(blurb);
     },
   };
-  carousel.init();
   $(".rArrow").on("click", () => carousel.next());
   $(".lArrow").on("click", () => carousel.prev());
   $(".img").on("click", ".backR", () => carousel.next());
@@ -59,6 +66,7 @@ $(document).ready(async () => {
     dir === "next" ? carousel.next() : carousel.prev();
   };
   let interval = setInterval(intervalFunc, time);
+  carousel.init();
   $(document).on("keydown", (event) => {
     if (event.key === "Escape") clearInterval(interval);
     else if (event.key === " ") interval = setInterval(intervalFunc, time);
